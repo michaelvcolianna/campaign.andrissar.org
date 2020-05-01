@@ -53,3 +53,22 @@ function mcluhan_child_comments_open($open, $post_id)
 
     return $open;
 }
+
+/**
+ * Privacy page redirect
+ *
+ * Since the privacy page isn't needed, but is required, this redirects any
+ * requests to it.
+ */
+add_action('template_redirect', 'mcluhan_child_template_redirect');
+function mcluhan_child_template_redirect()
+{
+    $id = get_queried_object_id();
+    $post = get_post($id);
+
+    if($post->post_name == 'privacy-policy')
+    {
+        wp_redirect(home_url());
+        exit();
+    }
+}
