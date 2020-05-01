@@ -26,10 +26,30 @@ function mcluhan_child_enqueue_styles()
 add_action('wp_head', 'mcluhan_child_wp_head');
 function mcluhan_child_wp_head()
 {
-    global $post;
+    $id = get_queried_object_id();
 
-    if(has_excerpt($post))
+    if(has_excerpt($id))
     {
-        echo '<meta name="description" content="' . get_the_excerpt($post) . '">';
+        echo '<meta name="description" content="' . get_the_excerpt($id) . '">';
     }
+}
+
+/**
+ * Media page comments
+ *
+ * Disables comments on media pages globally.
+ *
+ * @link https://www.wpbeginner.com/wp-tutorials/how-to-completely-disable-comments-in-wordpress/#disable-comments-on-media
+ */
+add_filter('comments_open', 'mcluhan_child_comments_open', 10, 2);
+function mcluhan_child_comments_open($open, $post_id)
+{
+    $post = get_post($post_id);
+
+    if($post->post_type == 'attachment')
+    {
+        return false;
+    }
+
+    return $open;
 }
