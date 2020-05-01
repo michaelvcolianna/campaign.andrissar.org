@@ -13,3 +13,8 @@ Tags: two-columns, left-sidebar, custom-menu, custom-colors, editor-style, featu
 Text Domain: mcluhan-child
 
 */
+
+.site-header
+{
+    z-index: 99998;
+}

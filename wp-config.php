@@ -81,6 +81,16 @@ $table_prefix = getenv( 'DB_PREFIX' );
 define( 'WP_DEBUG', false );
 
 /**
+ * Background updates
+ *
+ * The core developers added functionality for automatic updating, which does
+ * not play well with version control.
+ *
+ * @link https://wordpress.org/support/article/configuring-automatic-background-updates/
+ */
+define( 'AUTOMATIC_UPDATER_DISABLED', true );
+
+/**
  * Site URLs
  *
  * Sets the site address and WordPress address URLs at startup, instead of using
