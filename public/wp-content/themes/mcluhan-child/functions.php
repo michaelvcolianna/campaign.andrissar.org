@@ -16,3 +16,20 @@ function mcluhan_child_enqueue_styles()
         wp_get_theme()->get('Version')
     );
 }
+
+/**
+ * WP Head actions
+ *
+ * Alters/adds to the elements printed by the wp_head() call in the header.php
+ * file.
+ */
+add_action('wp_head', 'mcluhan_child_wp_head');
+function mcluhan_child_wp_head()
+{
+    global $post;
+
+    if(has_excerpt($post))
+    {
+        echo '<meta name="description" content="' . get_the_excerpt($post) . '">';
+    }
+}
