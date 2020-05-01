@@ -1,12 +1,10 @@
 <?php get_header(); ?>
 
-<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-    <?php $page_for_posts = get_option( 'page_for_posts' ); ?>
+<?php $page_for_posts = get_option( 'page_for_posts' ); ?>
 
-    <div class="featured-image">
-        <?php echo get_the_post_thumbnail( $page_for_posts, 'mcluhan_fullscreen-image' ); ?>
-    </div>
-<?php endif; ?>
+<div class="featured-image">
+    <?php echo get_the_post_thumbnail( $page_for_posts, 'mcluhan_fullscreen-image' ); ?>
+</div>
 
 <div class="section-inner">
 
