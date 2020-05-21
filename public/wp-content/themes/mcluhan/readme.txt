@@ -50,7 +50,7 @@ In the resume page template, all titles span the entire width of the content, wh
 The text entered into this textarea will be displayed on the page set to be used as your page for posts (or home page, if no such page has been set). 
 
 = Hide social buttons =
-As default, the social section and a search toggle, even if a menu has not been set for the social section. If you check this box, the social section will always be hidden (even if you create a social menu).
+By default, the social section and a search toggle, even if a menu has not been set for the social section. If you check this box, the social section will always be hidden (even if you create a social menu).
 
 = Archive date format =
 Here, you can choose how the post dates should be displayed in the post previews (the list format on archive pages). You can show the dates with month first (Jan 1) or day of month first (1 Jan), and select whether to display the date in lowercase or not.
@@ -71,6 +71,26 @@ Source: http://fontawesome.io/
 
 
 == Changelog ==
+
+Version 2.0.4 (2020-05-10)
+-------------------------
+- Updated the search button to be hidden on mobile if "Hide Social Buttons" is checked, as the desktop search is hidden when that option is checked.
+- Updated the description of the "Hide Social Buttons" setting in the Customizer.
+
+Version 2.0.3 (2020-05-10)
+-------------------------
+- If a posts page is set, and a "Front Page Title" hasn't been set, use the title of the posts page as the archive title when the posts page is displayed.
+
+Version 2.0.2 (2020-05-08)
+-------------------------
+- Made the "Full Width Template" available to posts as well as pages.
+- Fixed the default block appender in the block editor having the wrong font family.
+- Added a Customizer option for hiding the "Related Posts" section on single posts.
+- Updated Font Awesome, stripped out unused FontAwesome styles from `font-awesome.css`, and added support for a lot more icons.
+
+Version 2.0.1 (2020-05-04)
+-------------------------
+- Fixed the McLuhan header/sidebar being displayed on top of the WordPress admin bar (thanks, @adamkheckler).
 
 Version 2.0.0 (2020-04-30)
 -------------------------
